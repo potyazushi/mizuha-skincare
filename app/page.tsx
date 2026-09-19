@@ -1,3 +1,4 @@
+/* oxlint-disable next/no-img-element */
 import {
   ArrowDown,
   ArrowUpRight,
@@ -8,7 +9,6 @@ import {
   ShieldCheck,
   Sun,
 } from 'lucide-react';
-import Image from 'next/image';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
@@ -94,13 +94,12 @@ export default function Home() {
         </div>
 
         <div className="hero-visual">
-          <Image
+          <img
             src={`${basePath}/images/mizuha-hero.jpg`}
             alt="水面と氷のようなアクリルの上に置かれた美容液ボトル"
-            width={2200}
-            height={1238}
-            priority
-            unoptimized
+            width="2200"
+            height="1238"
+            fetchPriority="high"
           />
           <div className="formula-tag" aria-hidden="true">
             <span>FORMULA</span>
@@ -142,13 +141,12 @@ export default function Home() {
 
       <section className="mechanism" id="product" aria-labelledby="mechanism-title">
         <div className="mechanism-image">
-          <Image
+          <img
             src={`${basePath}/images/serum-texture.jpg`}
             alt="透明な美容液が水面へ広がるテクスチャー"
-            width={1800}
-            height={1200}
+            width="1800"
+            height="1200"
             loading="lazy"
-            unoptimized
           />
           <span>WATER HOLDING SYSTEM</span>
         </div>
@@ -220,13 +218,12 @@ export default function Home() {
           </div>
         </div>
         <div className="ritual-image">
-          <Image
+          <img
             src={`${basePath}/images/morning-ritual.jpg`}
             alt="明るい洗面台で美容液ボトルを手に持つ朝のスキンケアシーン"
-            width={1200}
-            height={1800}
+            width="1200"
+            height="1800"
             loading="lazy"
-            unoptimized
           />
           <p>2–3 DROPS / TWICE A DAY</p>
         </div>
@@ -261,13 +258,12 @@ export default function Home() {
 
       <section className="purchase" id="purchase" aria-labelledby="purchase-title">
         <div className="purchase-visual">
-          <Image
+          <img
             src={`${basePath}/images/mizuha-hero.jpg`}
             alt="MIZUHA保湿美容液の商品イメージ"
-            width={2200}
-            height={1238}
+            width="2200"
+            height="1238"
             loading="lazy"
-            unoptimized
           />
         </div>
         <div className="purchase-card">
